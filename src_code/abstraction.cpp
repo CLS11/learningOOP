@@ -1,5 +1,5 @@
 // Showing the important information while capping the unimportant ones.
-// We can't create instances of abstract class but the pointers can't be
+// We can't create instances of abstract class but the pointers can be
 // created.
 
 #include <iostream>
