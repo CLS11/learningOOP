@@ -4,7 +4,7 @@
 #include <list>
 using namespace std;
 
-class ytChannel {
+class YTChannel {
 public:
     string Name;
     string ownerName;
@@ -13,7 +13,7 @@ public:
 };
 
 int main() {
-    ytChannel yt;
+    YTChannel yt;
     yt.Name = "MnM";  
     yt.ownerName = "Tracy";  
     yt.subscriberCount = 2000;  

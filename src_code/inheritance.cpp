@@ -3,7 +3,7 @@
 using namespace std;
 
 // Base class
-class ytChannel {
+class YTChannel {
 private:
   string Name;
   int subscriberCount;
@@ -14,7 +14,7 @@ protected:
 
   // making a constructor
 public:
-  ytChannel(string name, string OwnerName) {
+  YTChannel(string name, string OwnerName) {
     Name = name;
     ownerName = OwnerName;
     subscriberCount = 0;
@@ -42,10 +42,10 @@ public:
 
 // inheriting all the public properties/methods of youtube channel into the new
 // class. derived class Can have its own members
-class artYtChannel : public ytChannel {
+class ArtYTChannel : public YTChannel {
 public:
-  artYtChannel(string Name, string ownerName)
-      : ytChannel(Name, ownerName) {} // making public constructor
+  ArtYTChannel(string Name, string ownerName)
+      : YTChannel(Name, ownerName) {} // making public constructor
   void practice() {
     cout << ownerName
          << "is practicing vocals, learning instruments, studying nodes"
@@ -54,8 +54,8 @@ public:
 };
 
 int main() {
-  artYtChannel ytChannel2("Sebastian", "SJ Sebastian");
-  artYtChannel ytChannel3("JJ Lin", "Jason");
+  ArtYTChannel ytChannel2("Sebastian", "SJ Sebastian");
+  ArtYTChannel ytChannel3("JJ Lin", "Jason");
   ytChannel2.publishVideo("Acoustics");
   ytChannel2.publishVideo("Solo");
   ytChannel2.subscribe();

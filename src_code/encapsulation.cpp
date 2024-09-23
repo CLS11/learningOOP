@@ -4,7 +4,7 @@
 #include <list>
 using namespace std;
 
-class ytChannel {
+class YTChannel {
 private:
   string Name;
   string ownerName;
@@ -13,7 +13,7 @@ private:
 
   // making a constructor
 public:
-  ytChannel(string Name, string ownerName) {
+  YTChannel(string Name, string ownerName) {
     Name = Name;
     ownerName = ownerName;
     subscriberCount = 0;
@@ -40,7 +40,7 @@ public:
 };
 
 int main() {
-  ytChannel ytChannel1("MnM", "Tracy");
+  YTChannel ytChannel1("MnM", "Tracy");
   ytChannel1.publishVideo("A");
   ytChannel1.publishVideo("B");
   ytChannel1.publishVideo("C");

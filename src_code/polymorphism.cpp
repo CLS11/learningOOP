@@ -1,11 +1,11 @@
-// It describes the ability of an object to have multiple forms.
+ // It describes the ability of an object to have multiple forms.
 // 2 or more objects inheriting from the same base class. They can have methods
 // with same name but different implementation.
 #include <iostream>
 #include <list>
 using namespace std;
 
-class ytChannel {
+class YTChannel {
 private:
   string Name;
   int subscriberCount;
@@ -16,7 +16,7 @@ protected:
   int contentQuality;
 
 public:
-  ytChannel(string name, string OwnerName) {
+  YTChannel(string name, string OwnerName) {
     Name = name;
     ownerName = OwnerName;
     subscriberCount = 0;
@@ -50,10 +50,10 @@ public:
   }
 };
 
-class artYtChannel : public ytChannel {
+class ArtYTChannel : public YTChannel {
 public:
-  artYtChannel(string Name, string ownerName)
-      : ytChannel(Name, ownerName) {} // making public constructor
+  ArtYTChannel(string Name, string ownerName)
+      : YTChannel(Name, ownerName) {} // making public constructor
   void practice() {
     cout << ownerName
          << " is practicing vocals, learning instruments, studying nodes"
@@ -62,10 +62,10 @@ public:
   }
 };
 
-class travelYtChannel : public ytChannel {
+class TravelYTChannel : public YTChannel {
 public:
-  travelYtChannel(string Name, string ownerName)
-      : ytChannel(Name, ownerName) {} // making public constructor
+  TravelYTChannel(string Name, string ownerName)
+      : YTChannel(Name, ownerName) {} // making public constructor
   void practice() {
     cout << ownerName
          << " is practicing photography, learning languages, planning" << endl;
@@ -74,16 +74,16 @@ public:
 };
 
 int main() {
-  artYtChannel ytChannel2("Sebastian", "SJ Sebastian");
-  travelYtChannel ytChannel3("Beautysail", "Frank");
+  ArtYTChannel ytChannel2("Sebastian", "SJ Sebastian");
+  TravelYTChannel ytChannel3("Beautysail", "Frank");
   ytChannel2.practice();
   ytChannel3.practice();
   ytChannel3.practice();
 
   // creating a pointer
   // POinters of base class pointing towards the derived class
-  ytChannel *yt1 = &ytChannel2;
-  ytChannel *yt2 = &ytChannel3;
+  YTChannel *yt1 = &ytChannel2;
+  YTChannel *yt2 = &ytChannel3;
 
   yt1->checkAnalytics();
   yt2->checkAnalytics();

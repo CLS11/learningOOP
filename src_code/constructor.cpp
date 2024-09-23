@@ -8,7 +8,7 @@
 #include <list>
 using namespace std;
 
-class ytChannel {
+class YTChannel {
 public:
   string Name;
   string ownerName;
@@ -16,7 +16,7 @@ public:
   list<string> publishedVideoTitles;
 
   // making a constructor
-  ytChannel(string Name, string ownerName) {
+  YTChannel(string Name, string ownerName) {
     Name = Name;
     ownerName = ownerName;
     subscriberCount = 0;
@@ -34,7 +34,7 @@ public:
 };
 
 int main() {
-  ytChannel ytChannel1("MnM", "Tracy");
+  YTChannel ytChannel1("MnM", "Tracy");
   ytChannel1.publishedVideoTitles.push_back("A");
   ytChannel1.publishedVideoTitles.push_back("B");
   ytChannel1.publishedVideoTitles.push_back("C");
@@ -43,8 +43,8 @@ int main() {
   yt.subscriberCount = 2000;
   yt.publishedVideoTitles = {"A", "B", "C"};*/
 
-  ytChannel ytChannel2("Cups", "Alissa");
-  
+  YTChannel ytChannel2("Cups", "Alissa");
+
   ytChannel1.printInfo();
   ytChannel2.printInfo();
   return 0;
