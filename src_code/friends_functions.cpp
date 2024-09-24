@@ -16,6 +16,7 @@ public:
     area = (1.73 * a * a) / 4;
   }
 
+
   //friend void printResults(EquilateralTriangle);
   friend class Homework;
 };

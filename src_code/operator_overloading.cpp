@@ -26,6 +26,7 @@ ostream &operator<<(ostream &COUT, YTChannel &ytChannel) {
   return COUT;
 };
 
+
 struct MyCollection {
   list<YTChannel> myChannels;
 
